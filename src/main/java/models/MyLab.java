@@ -1,6 +1,5 @@
 package models;
 
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import lombok.*;
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,5 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MyLab {
+
+    @OneToMany(mappedBy = "MyLab")
     private List<MyTribble> myTribbles = new ArrayList<>();
 }
